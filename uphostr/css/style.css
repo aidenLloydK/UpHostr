@@ -1,0 +1,114 @@
+/* /login/css/style.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+    color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #00ffff, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+  }
+  
+  .login-box {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    border: 1px solid #2f2f2f;
+    border-radius: 16px;
+    padding: 40px 30px;
+    width: 350px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  }
+  
+  .login-box h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin: 10px 0 5px;
+    font-size: 0.95rem;
+    color: #d1d1d1;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #0f0f0f;
+    color: #f0f0f0;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    background: #1c1c1c;
+  }
+  
+  .lgbtn {
+    background: linear-gradient(to right, #00ffff, #8a2be2);
+    border: none;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .lgbtn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  }
+  
+  a {
+    color: #00ffff;
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  #error-message {
+    color: #ff4c4c;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    text-align: center;
+  }
+  

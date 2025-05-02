@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account | UpHostr</title>
+  <link rel="stylesheet" href="/main/hb/css/app.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <a href="/main/dash.html"><div class="logo">UpHostr Dashboard</div></a>
+    <div class="header-buttons">
+      <a href="/main/hb/setting.html"><button>Settings</button></a>
+      <a href="/main/hb/account.html"><button>Account</button></a>
+      <button>Logout</button>
+      <button id="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+    </div>
+  </header>
+
+  <main style="padding: 2rem;">
+    <h1>Your Account Info</h1>
+    <div id="account-info">
+      <p><strong>User ID:</strong> <span id="user-id">Loading...</span></p>
+      <p><strong>Email:</strong> <span id="user-email">Loading...</span></p>
+      <button id="delete-account" class="DA">Delete Account</button>
+
+    </div>
+  </main>
+
+  <script src="/main/hb/js/app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAdXVNjRn0MOoahINVo4AFl50MDtZF_E0k",
+      authDomain: "focusmate-48e66.firebaseapp.com",
+      projectId: "focusmate-48e66",
+      storageBucket: "focusmate-48e66.appspot.com",
+      messagingSenderId: "309886550120",
+      appId: "1:309886550120:web:ef154ea13f62aab793bbdd",
+      measurementId: "G-NWFX43SW8J"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        document.getElementById('user-id').textContent = user.uid;
+        document.getElementById('user-email').textContent = user.email;
+      } else {
+        // Optionally redirect to login page if not logged in
+        window.location.href = "/index.html";
+      }
+    });
+  </script>
+</body>
+</html>
