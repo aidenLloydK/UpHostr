@@ -33,13 +33,7 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script>
     const firebaseConfig = {
-      apiKey: "AIzaSyAdXVNjRn0MOoahINVo4AFl50MDtZF_E0k",
-      authDomain: "focusmate-48e66.firebaseapp.com",
-      projectId: "focusmate-48e66",
-      storageBucket: "focusmate-48e66.appspot.com",
-      messagingSenderId: "309886550120",
-      appId: "1:309886550120:web:ef154ea13f62aab793bbdd",
-      measurementId: "G-NWFX43SW8J"
+      
     };
 
     firebase.initializeApp(firebaseConfig);
@@ -50,7 +44,7 @@
         document.getElementById('user-id').textContent = user.uid;
         document.getElementById('user-email').textContent = user.email;
       } else {
-        // Optionally redirect to login page if not logged in
+       
         window.location.href = "/index.html";
       }
     });
